@@ -48,8 +48,8 @@ class CallBotServicer(bot_pb2_grpc.CallBotServicer):
 def serve():
     server = grpc.server(concurrent.futures.ThreadPoolExecutor(max_workers=10))
     bot_pb2_grpc.add_CallBotServicer_to_server(CallBotServicer(), server)
-    server.add_insecure_port('[::]:50051')
-    print("Server starting on port 50051...")
+    server.add_insecure_port('[::]:50080')
+    print("Server starting on port 50080...")
     server.start()
     server.wait_for_termination()
 
