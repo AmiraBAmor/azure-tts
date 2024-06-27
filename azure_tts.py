@@ -12,4 +12,4 @@ def initialize_speech_synthesizer():
     return speechsdk.SpeechSynthesizer(speech_config=speech_config, audio_config=audio_config)
 
 def synthesize_text_to_speech(text, synthesizer):
-    synthesizer.speak_text_async(text).get()
+    synthesizer.speak_text_async(text).get() 
